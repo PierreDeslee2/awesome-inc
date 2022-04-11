@@ -1,0 +1,80 @@
+
+version: 2
+
+models:
+    - name: country
+      description: "country table"
+      columns:
+          - name: id
+            description: "The primary key for this table"    
+            tests:
+                - unique
+                - not_null
+          - name: name
+            description: ""
+          - name: region
+            description: ""
+
+    - name: customer
+      description: "customer table"
+      columns:
+          - name: id
+            description: "The primary key for this table"    
+            tests:
+                - unique
+                - not_null
+          - name: name
+            description: ""
+          - name: email
+            description: ""
+          - name : country_id
+            description: ""
+          - name: premium_customer
+            description: ""
+
+    - name: product
+      description: "product table"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: reference
+            description: ""
+          - name: name
+            description: ""
+          - name: category_id
+            description: ""
+          - name: price
+            description: ""
+
+    - name: product_category
+      description: "product_category table"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: name
+            description: ""
+
+    - name: installation
+      description: "installation table"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: name
+            description: ""
+          - name: description
+            description: ""
+          - name: product_id
+            description: ""
+          - name: customer_id
+            description: ""
+          - name: installation_date
+            description: ""
