@@ -13,4 +13,4 @@ models:
           - name: name
             description: ""
           - name: region
-            description = ""
+            description: ""
