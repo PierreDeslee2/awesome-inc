@@ -1,12 +1,6 @@
 with country as (
     select *
-    from {{ ref('country') }}
+    from {{ ref('dim_country') }}
 )
 select * from country c
-where region = 'Asia';
-
-with customer as (
-    select *
-    from {{ ref('customer') }}
-)
-select * from customer c
+order by c.id
