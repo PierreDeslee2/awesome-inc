@@ -11,6 +11,10 @@ stg_product_category as (
 
 select 
     c.id,
+    c.reference,
+    c.name,
+    c.category_id,
+    cast(c.price as int),
     pc.name as category_name,
     current_date as load_date, 
     current_date as last_modif_date,

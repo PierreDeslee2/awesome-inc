@@ -69,6 +69,13 @@ models:
           - name: main_source
             description: ""
 
+    - name : dim_date
+      descript: "dim_date"
+      columns:
+        - name: id_date
+        - name: id_month
+        - name: lb_month
+
     - name: fact_installation
       description: "installation table"
       columns:
@@ -89,6 +96,7 @@ models:
             description: ""
           - name: installation_date
             description: ""
+          - name: id_installation_date
           - name: price
             description: ""
           - name: load_date

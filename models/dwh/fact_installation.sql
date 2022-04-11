@@ -4,7 +4,7 @@ with stg_installation as (
     select *
     from {{ ref('stg_installation') }}
 ),
-dim_consumer as (
+dim_customer as (
     select *
     from {{ ref('dim_customer') }}
 ),
@@ -19,6 +19,7 @@ dim_product as (
 
 select 
     i.*,
+    to_char(to_date(i.installation_date,'yyyy-mm-dd'),'yyyymmdd') as id_installation_date,
     cou.id as customer_country_id,
     p.price,
     current_date as load_date, 

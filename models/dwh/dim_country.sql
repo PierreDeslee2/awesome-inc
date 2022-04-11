@@ -4,7 +4,7 @@ with stg_country as (
 )
 
 select 
-    c.id, 
+    c.*, 
     current_date as load_date, 
     current_date as last_modif_date,
     'GH' as main_source
